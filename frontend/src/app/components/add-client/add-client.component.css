@@ -1,0 +1,17 @@
+.content {
+    background-color: #DAE2B6;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+input {
+    margin-left: 10px;
+}
+
+.apellido {
+    margin-left: 10px;
+}
+
+label {
+    width: 100px;
+}

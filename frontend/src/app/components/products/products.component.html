@@ -1,0 +1,19 @@
+<div class="content">
+    <table>
+        <tr>
+            <th class="code">Cod. producto</th>
+            <th class="name">Producto</th>
+            <th class="amount">Cantidad</th>
+            <th class="price"> Precio</th>
+        </tr>
+        <tr *ngFor="let product of products">
+            <td *ngIf="product.active">{{product.idProducto}}</td>
+            <td *ngIf="product.active">{{product.nombre_producto}}</td>
+            <td *ngIf="product.active">{{product.cantidad_producto}} {{product.producto_unidad.nombre_unidad}}</td>
+            <td *ngIf="product.active">${{product.precio_producto}}</td>
+            <button class="buttons" *ngIf="product.active" (click)="disable(product)">Eliminar</button>
+        </tr>
+        <button><a href="/nuevo-producto">Añadir producto</a></button>
+    </table>
+
+</div>

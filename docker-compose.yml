@@ -1,0 +1,54 @@
+services:
+  komodo_frontend:
+    networks:
+      - komodo
+    image: kjistik/komodo:front
+    expose:
+      - "4200"
+      - "8080"
+    ports:
+      - "4200:4200"
+    links:
+    - komodo_backend
+    container_name: komodo-frontend
+
+  komodo_backend:
+    networks:
+      - komodo
+    expose:
+      - "8080"
+      - "3306"      
+    ports:
+      - "8080:8080" 
+    image: kjistik/komodo:back
+    container_name: komodo-backend
+    links:
+      - komodo_docker
+    depends_on:
+      - komodo_docker
+
+  komodo_docker:
+    networks:
+      - komodo
+    image: "mariadb"
+    container_name: komodo-db
+    expose:
+      - "3306"
+    ports:
+      - "3307:3306"
+    environment:
+      - MARIADB_ROOT_PASSWORD=kjistik_docker
+      - MARIADB_DATABASE=komodo_database
+      - MYSQL_AUTO_UPGRADE=true
+      - MARIADB_USER=root
+      - MARIADB_PASSWORD=
+    volumes:
+      - komodo-db
+
+networks:
+  komodo:
+    driver: bridge
+    name: komodo
+
+volumes:
+  komodo-db: 

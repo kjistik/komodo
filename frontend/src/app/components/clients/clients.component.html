@@ -1,0 +1,21 @@
+<div class="content">
+    <table>
+        <tr>
+            <th>Cliente</th>
+            <th>Localidad</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+            <th>Dirección</th>
+        </tr>
+        <tr *ngFor="let c of clients">
+            <td *ngIf="c.active">{{c.client_name}} {{c.client_lastName}}</td>
+            <td *ngIf="c.active">{{c.localidad}}</td>
+            <td *ngIf="c.active">{{c.client_phone_ch}} {{c.client_phone}}</td>
+            <td *ngIf="c.active">{{c.client_email}}</td>
+            <td *ngIf="c.active">{{c.client_street}}</td>
+            <button class="buttons" (click)="disable(c)" *ngIf="c.active">Eliminar</button>
+        </tr>
+        <button><a href="/nuevo-cliente">Añadir cliente</a></button>
+    </table>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="content">
+    <h2>Añadir nuevo producto</h2>
+    <div>
+        <label for="name">Nombre del producto: </label><input type="text" placeholder="inserte el nombre del producto"
+            #nombre>
+    </div>
+    <div class="units">
+        <label for="cantidad">Cantidad del producto: </label><input required type="number" min="0"
+            placeholder="Cantidad" [ngModel]="cantidad"> <select name="unit" [(ngModel)]="selectedUnit">
+            <option [ngValue]="unit" *ngFor="let unit of units">{{unit.nombre_unidad}}</option>
+        </select>
+    </div>
+    <div> <label for="precio">Precio: </label><input type="number" min="0" [ngModel]="precio"></div>
+    <button (click)="addProduct(nombre.value, cantidad, precio, selectedUnit); nombre.value='';">Añadir</button>
+    <button class="space" (click)="goBack()">Volver</button>
+</div>
