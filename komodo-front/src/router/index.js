@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import ClientsView from '../views/ClientsView.vue'
-import EditClientsView from '../views/EditClientsView'
+import EditClientsView from '../views/EditClientsView.vue'
+import CreateClientsView from '../views/CreateClientsView.vue'
+import ProductsView from '../views/ProductsView.vue'
 const routes = [
   {
     path: '/clients',
@@ -11,6 +13,17 @@ const routes = [
     path: '/clients/edit/:id',
     name: 'EditClients',
     component: EditClientsView
+  },
+  {
+    path: '/products',
+    name: 'products',
+    component: ProductsView
+  },
+  {
+    path: '/clients/create',
+    name: 'CreateClient',
+    component: CreateClientsView
+
   }
 ]
 

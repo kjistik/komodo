@@ -49,8 +49,8 @@ public class Clients {
     @Column(name = "client_city")
     String client_city;
 
-    @Column(name = "client_adress")
-    String client_adress;
+    @Column(name = "client_address")
+    String client_address;
 
     @JsonBackReference(value = "order_clients")
     @OneToMany(mappedBy = "order_clients")

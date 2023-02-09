@@ -32,7 +32,7 @@ public class ClientServiceImp implements ClientService {
         return repo.findById(id)
                 .map(client -> {
                     client.setActive(newClient.isActive());
-                    client.setClient_adress(newClient.getClient_adress());
+                    client.setClient_address(newClient.getClient_address());
                     client.setClient_city(newClient.getClient_city());
                     client.setClient_lastName(newClient.getClient_lastName());
                     client.setClient_mail(newClient.getClient_mail());
