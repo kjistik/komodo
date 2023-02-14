@@ -1,6 +1,8 @@
 <template>
     <div class="container-sm col-10 self-align-around">
         <h5 class="beginning">Productos</h5>
+        <router-link to=/products/create><button scope="row" class="btn btn-secondary container col-2">Crear
+                producto</button></router-link>
         <table class="table table-dark table-striped">
             <thead>
                 <tr scope="row">
@@ -15,7 +17,8 @@
                     <td scope="col">${{ product.product_ppu }}</td>
                     <td scope="col">{{ product.product_quantity }} {{ product.product_unit.unitsName }}</td>
 
-                    <button @click="updateURL(product.id_product)" class="btn btn-secondary">Editar Producto</button>
+                    <router-link :to="'/products/edit/' + product.id_product"><button class="btn btn-secondary">Editar
+                            Producto</button></router-link>
                 </tr>
             </tbody>
         </table>
@@ -44,12 +47,8 @@ export default {
 
     name: 'products',
     methods: {
-        updateURL(id) {
-            this.url = "/clients/edit/" + id
-            router.replace(this.url)
-        },
         async getProducts() {
-            fetch('http://localhost:8080/api/products/todos')
+            fetch('http://localhost:8080/api/productos/todos')
                 .then((response) => response.json())
                 .then((data) => ((this.products = data)))
 

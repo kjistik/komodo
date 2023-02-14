@@ -16,19 +16,19 @@ public class UnitsServiceImp implements UnitsService {
     UnitsRepository repo;
 
     @Override
-    public List<Units> all(){
+    public List<Units> all() {
         return repo.findAll();
     }
 
-@Override
-public Optional<Units> one(Long id){
-    return repo.findById(id);
-}
+    @Override
+    public Optional<Units> one(Long id) {
+        return repo.findById(id);
+    }
 
     @Override
-    public Units newUnit(Units newUnit){
+    public Units newUnit(Units newUnit) {
         return repo.save(newUnit);
-    
+
     }
 
 }

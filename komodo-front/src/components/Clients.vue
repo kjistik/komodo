@@ -50,13 +50,6 @@ export default {
 
     name: 'clients',
     methods: {
-        updateURL(id) {
-            this.url = "/clients/edit/" + id
-            router.replace(this.url)
-        },
-        createURL() {
-            router.replace('/clients/create')
-        },
         async getClients() {
             fetch('http://localhost:8080/api/clientes/todos')
                 .then((response) => response.json())

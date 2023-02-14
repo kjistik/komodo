@@ -17,7 +17,7 @@ import kjistik.komodoback.Models.Products;
 import kjistik.komodoback.Services.Products.ProductServiceImp;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/api/productos")
 @CrossOrigin("http://localhost:8081")
 public class ProductsController {
 

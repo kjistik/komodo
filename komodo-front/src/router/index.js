@@ -3,6 +3,8 @@ import ClientsView from '../views/ClientsView.vue'
 import EditClientsView from '../views/EditClientsView.vue'
 import CreateClientsView from '../views/CreateClientsView.vue'
 import ProductsView from '../views/ProductsView.vue'
+import EditProductsView from '../views/EditProductsView.vue'
+import CreateProductsView from '../views/CreateProductsView.vue'
 const routes = [
   {
     path: '/clients',
@@ -23,7 +25,16 @@ const routes = [
     path: '/clients/create',
     name: 'CreateClient',
     component: CreateClientsView
-
+  },
+  {
+    path: '/products/edit/:id',
+    name: 'EditProducts',
+    component: EditProductsView
+  },
+  {
+    path: '/products/create',
+    name: 'CreateProducts',
+    component: CreateProductsView
   }
 ]
 

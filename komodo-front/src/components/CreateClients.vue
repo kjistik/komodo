@@ -6,7 +6,7 @@
             <form @submit.prevent="submit()" class="form-group form-group-sm">
                 <label class="col-sm-1" for="nombre">Nombre: </label><input required v-model="client.client_name"
                     class="col-lg-3 form-control form-control-sm" type="text" placeholder="" id="nombre">
-                <span> <label class="col-sm-1 input-item" for="apellido">Apellido: </label><input req89red
+                <span> <label class="col-sm-1 input-item" for="apellido">Apellido: </label><input required
                         v-model="client.client_lastName" class="col-lg-3 form-control form-control-sm" type="text"
                         placeholder="" id="apellido"></span>
                 <span> <label class="form-label input-item" for="correo">Correo: </label><input
