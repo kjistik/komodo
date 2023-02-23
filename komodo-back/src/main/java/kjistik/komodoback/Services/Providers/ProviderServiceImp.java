@@ -31,7 +31,7 @@ public class ProviderServiceImp implements ProviderService {
                     provider.setProvider_mail(newProvider.getProvider_mail());
                     provider.setProvider_city(newProvider.getProvider_city());
                     provider.setProvider_phone(newProvider.getProvider_phone());
-                    provider.setProvider_adress(newProvider.getProvider_adress());
+                    provider.setProvider_address(newProvider.getProvider_address());
                     return repo.save(provider);
                 })
                 .orElseGet(() -> {

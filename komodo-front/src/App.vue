@@ -19,9 +19,12 @@
             <li class="nav-item">
               <router-link class="nav-link link" to="/products" >Productos</router-link>
             </li>
+            <li class="nav-item">
+              <router-link class="nav-link link" to="/providers" >Proveedores</router-link>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Ventas y proveedores
+                Ventas y pedidos
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="#">Ventas</a></li>

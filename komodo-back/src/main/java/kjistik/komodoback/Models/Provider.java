@@ -45,8 +45,8 @@ public class Provider {
     @Column(name = "provider_phone")
     Integer provider_phone;
 
-    @Column(name = "provider_adress")
-    String provider_adress;
+    @Column(name = "provider_address")
+    String provider_address;
 
     @JsonBackReference(value = "order_provider")
     @OneToMany(mappedBy = "order_provider")

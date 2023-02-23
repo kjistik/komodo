@@ -59,7 +59,7 @@ export default {
             products: null,
         }
     },
-    mounted() {
+    created() {
         this.getProducts()
     }
 }
