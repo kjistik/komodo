@@ -31,4 +31,8 @@ public class UnitsServiceImp implements UnitsService {
 
     }
 
+    @Override
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
 }

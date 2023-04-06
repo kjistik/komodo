@@ -13,4 +13,5 @@ public interface UnitsService {
 
     Units newUnit(Units newUnit);
 
+    void delete(Long id);
 }

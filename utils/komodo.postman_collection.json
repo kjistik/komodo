@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "95d74c79-f6f0-45d3-910b-cc44d94d4c10",
+		"name": "komodo",
+		"description": "API creada como práctica. Con el propósito de ser utilizada por una tienda.\n\nAPI created as practice to be used by a store.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20556546"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/unidades/nuevo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id_units\": null,\n\"unitsName\":null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/unidades/nuevo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"unidades",
+						"nuevo"
+					]
+				},
+				"description": "Añade una nueva unidad al sistema para su uso posterior al crear productos.\n\nAdds a new unit so it may be used later when adding products."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/unidades/todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/unidades/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"unidades",
+						"todos"
+					]
+				},
+				"description": "Devuelve la totalidad de las unidades registradas\n\nReturns all the registered units"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/unidades/eliminar/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/unidades/eliminar/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"unidades",
+						"eliminar",
+						"3"
+					]
+				},
+				"description": "Request para eliminar permanentemente un regisro, indicando el valor de ID del registro\n\nRequest that permanently deletes a record from the database, identified by the given ID value"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/clientes/nuevo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id_clients\":null,\n\"client_name\":\"Gerardo\",\n\"client_lastName\":\"Rodríguez\",\n\"active\":true,\n\"client_mail\":\"gerardo@example.com\",\n\"client_phone\":3462698422,\n\"client_city\":\"Venado Tuerto\",\n\"client_address\":\"calle 123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/clientes/nuevo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"nuevo"
+					]
+				},
+				"description": "Plantilla para registrar nuevos clientes usando la API\n\nTemplate for registering new users using the API"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/clientes/todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/clientes/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"todos"
+					]
+				},
+				"description": "Devuelve toda la información de los clientes registrados.\n\nReturns all information on the registered clients."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/clientes/cliente/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/clientes/cliente/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"cliente",
+						"1"
+					]
+				},
+				"description": "Devuelve unicamente un regisro, utilizando el valor de ID dado.\n\nReturns a single record. Indicates by the given ID value."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/clientes/cambiar/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id_clients\":null,\n\"client_name\":\"Mariana\",\n\"client_lastName\":\"Rodríguez\",\n\"active\":true,\n\"client_mail\":\"mariana@example.com\",\n\"client_phone\":3462698422,\n\"client_city\":\"Chañar Ladeado\",\n\"client_address\":\"calle 123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/clientes/cambiar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"cambiar",
+						"1"
+					]
+				},
+				"description": "Edita un registro. Puede utilizarse para actualizar la información del cliente o para cambiar su estado a inactivo, conservando información para futuro uso. Cabe destacar que el valor de ID no puede cambiarse con este request.\n\nEdits a record. Can be used to update client information o marking it as inactive, preserving the information for later use. ID value can not be changed with this request."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/productos/nuevo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id_product\":null,\n\"active\":true,\n\"product_name\":\"Producto A\",\n\"product_quantity\":2,\n\"product_ppu\":2.0,\n\"product_unit\":{\n    \"id_units\":2,\n    \"unitsName\":\"l\"\n}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/productos/nuevo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"nuevo"
+					]
+				},
+				"description": "Plantilla para crear un nuevo producto. El campo \"product_unit\" debe utilizar una unidad creada previamente.\n\nTemplate for creating new products. The \"product_unit\" field must use a previously created Unit."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/productos/todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/productos/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"todos"
+					]
+				},
+				"description": "Devuelve la totalidad de los productos registrados.\n\n  \nReturns all the registered products."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/productos/producto/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/productos/producto/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"producto",
+						"1"
+					]
+				},
+				"description": "Devuelve el registro de un producto, determinado por el valor de ID proporcionado.\n\nReturns a single product's record, determined by the given ID value.\n"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/productos/cambiar/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id_product\":null,\n\"active\":false,\n\"product_name\":\"Producto A\",\n\"product_quantity\":2,\n\"product_ppu\":2.0,\n\"product_unit\":{\n    \"id_units\":2,\n    \"unitsName\":\"l\"\n}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/productos/cambiar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"cambiar",
+						"1"
+					]
+				},
+				"description": "Edita un registro. Puede utilizarse para actualizar la información del producto o para cambiar su estado a inactivo, conservando información para futuro uso. Cabe destacar que el valor de ID no puede cambiarse con este request.\n\nEdits a record. Can be used to update product information o marking it as inactive, preserving the information for later use. ID value can not be changed with this request."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/proveedores/nuevo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id_provider\":null,\n    \"provider_name\":\"proveedor A\",\n    \"active\": true,\n    \"provider_mail\":\"provider@example.com\",\n    \"provider_city\":\"Los Quirquinchos\",\n    \"provider_phone\": 3462698422,\n    \"provider_address\":\"Calle 456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/proveedores/nuevo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"proveedores",
+						"nuevo"
+					]
+				},
+				"description": "Plantilla para registrar nuevos proveedores usando la API\n\nTemplate for registering new providers using the API"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/proveedores/todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/proveedores/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"proveedores",
+						"todos"
+					]
+				},
+				"description": "Devuelve toda la información de los proveedores registrados.\n\nReturns all information on the registered providers."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/proveedores/proveedor/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/proveedores/proveedor/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"proveedores",
+						"proveedor",
+						"1"
+					]
+				},
+				"description": "Devuelve el registro de un proveedor, determinado por el valor de ID proporcionado.\n\nReturns a single provider's record, determined by the given ID value."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/proveedores/cambiar/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id_provider\":null,\n    \"provider_name\":\"proveedor A\",\n    \"active\": false,\n    \"provider_mail\":\"provider@example.com\",\n    \"provider_city\":\"Los Quirquinchos\",\n    \"provider_phone\": 3462698422,\n    \"provider_address\":\"Calle 456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/proveedores/cambiar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"proveedores",
+						"cambiar",
+						"1"
+					]
+				},
+				"description": "Edita un registro. Puede utilizarse para actualizar la información del proveedor o para cambiar su estado a inactivo, conservando información para futuro uso. Cabe destacar que el valor de ID no puede cambiarse con este request.\n\nEdits a record. Can be used to update provider information o marking it as inactive, preserving the information for later use. ID value can not be changed with this request."
+			},
+			"response": []
+		}
+	]
+}

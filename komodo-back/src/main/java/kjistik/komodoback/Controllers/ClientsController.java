@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import kjistik.komodoback.Models.Clients;
 import kjistik.komodoback.Services.Clients.ClientServiceImp;
 
@@ -43,5 +42,4 @@ public class ClientsController {
     Clients changeClient(@PathVariable Long id, @RequestBody Clients newClient) {
         return service.changeClient(id, newClient);
     }
-
 }

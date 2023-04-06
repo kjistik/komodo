@@ -43,7 +43,7 @@ public class Provider {
     String provider_city;
 
     @Column(name = "provider_phone")
-    Integer provider_phone;
+    Long provider_phone;
 
     @Column(name = "provider_address")
     String provider_address;
