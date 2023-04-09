@@ -13,6 +13,6 @@ Komodo is an API designed to manipulate data concerning the daily operations of 
 To run the application, Java should be installed, along with some form of MySQL of MariaDB, I recommend using XAMPP for this, given that it provides access to phpMyAdmin. You could also use DBeaver or a similar program for the same effect with a native MySQL installation. For testing the API, import the collection file for Postman left in the **utils** folder. The executable .jar file can be found in the **utils** folder, in case you do not want to build the project.
 
 
-SpringBoot 3.0.5
-Java 17
-Maven 3.6.3
+* SpringBoot 3.0.5 
+* Java 17
+* Maven 3.6.3 
