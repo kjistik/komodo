@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import kjistik.komodoback.Models.OrderBacklog;
 import kjistik.komodoback.Repositories.OrderBacklogRepository;
 
+@Service
 public class Order_backlogServiceImpl implements Order_backlogService {
 
     @Autowired
