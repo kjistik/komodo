@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -34,6 +35,6 @@ public class Units {
     String unitsName;
 
     @JsonBackReference(value = "product_unit")
-    @OneToMany(mappedBy = "product_unit")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "product_unit")
     List<Products> product_unit;
 }

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -53,6 +54,6 @@ public class Clients {
     String client_address;
 
     @JsonBackReference(value = "order_clients")
-    @OneToMany(mappedBy = "order_clients")
+    @OneToMany(fetch=FetchType.EAGER,mappedBy = "order_clients")
     List<OrderBacklog> order_client;
 }

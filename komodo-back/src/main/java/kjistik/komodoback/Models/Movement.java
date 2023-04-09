@@ -4,6 +4,7 @@ import java.sql.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,6 +15,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.Setter;
 
 @Data
@@ -30,7 +32,8 @@ public class Movement {
     @Column(name = "id_movement")
     Long id_movement;
 
-    @ManyToOne
+    @NonNull
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "movement_product")
     Products movement_product;
 

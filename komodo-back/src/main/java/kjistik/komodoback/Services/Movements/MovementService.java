@@ -9,6 +9,8 @@ public interface MovementService {
 
     List<Movement> all();
 
+    List<Movement> ordered(Long id);
+
     Optional<Movement> one(Long id);
 
     Movement change(Long id, Movement newMovement);
