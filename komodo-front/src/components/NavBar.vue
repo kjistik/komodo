@@ -61,9 +61,6 @@ nav {
     background-color: cadetblue;
 }
 
-.selected {
-    background-color: rgba(255, 255, 255, 0.377);
-}
 
 .image {
     max-width: 20%;
