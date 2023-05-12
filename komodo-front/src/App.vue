@@ -1,48 +1,78 @@
 <template>
-  <div clas="content">
-    <MainView />
+  <div class="content">
+    <Navbar />
     <div class="view">
-      <router-view />
     </div>
     <div class="footer">
-      <FooterComponent />
+      <div class="container">
+        <div></div>
+        <div></div>
+        <p>2023 - Komodo - Martín Ernesto Coronel</p>
+        <div class="socials">
+          <a href="https://www.github.com/kjistik" target="_blank">
+            <img class="github" src="@/assets/github.svg">
+          </a>
+          <a href="https://www.linkedin.com/in/kjistik" target="_blank">
+            <img class="linkedin" src="@/assets/linkedin.svg">
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
+<script>
+import Navbar from './components/Navbar.vue'
+export default {
+  components: {
+    Navbar
+  }
+}
+</script>
+
 <style>
-body {
-  margin: 0px;
-  padding: 0px;
-  background-color: #333333;
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  color: white;
-  height: 60px;
-  background-color: #2C3E50;
-  width: 100%;
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 20%;
+}
+
+.github,
+.linkedin {
+  width: 30px;
 }
 
 .view {
-  position: absolute;
-  min-height: 70%;
-  width: 100%;
-  margin-top: 10px;
+  min-height: calc(100vh - 140px);
+  width: 100vw;
 }
-</style>
-<script>
-import NavBar from './components/NavBar.vue';
-import MainView from './views/MainView.vue';
-import FooterComponent from './components/FooterComponent.vue';
-export default {
-  components: {
-    NavBar,
-    MainView,
-    FooterComponent
-  }
+
+.footer {
+  background-color: #686868;
+  bottom: 0px;
+  width: 100vw;
+  height: 60px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  color: white;
+}
+
+.content {
+  background-color: #2C3539;
+  width: 100vw;
+  min-height: 100vh;
 
 }
-</script>
+</style>
