@@ -14,7 +14,7 @@
 	<name>komodo-back</name>
 	<description>backend for komodo app</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>20</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
